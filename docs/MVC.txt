@@ -1,0 +1,13 @@
+USER: username, email, password, createdAt, updatedAt
+
+APPARTIENT, 1N PRODUCT, ON USER
+
+PRODUCT: title, designation, categories, date_limit, alert, createdAt , updatedAt
+
+OBTIENT, 1N ROLE, 11 USER
+
+ROLE: name, designation, createdAt, updatedAt
+
+DEFINI, 1N TAG, 1N PRODUCT
+
+TAG: name, designation, color, createdAt, updatedAT
