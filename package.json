@@ -1,0 +1,25 @@
+{
+  "name": "api-denree",
+  "version": "1.0.0",
+  "description": "api de gestion de date limite de denrées alimentaires",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frbot25/api-denree.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frbot25/api-denree/issues"
+  },
+  "homepage": "https://github.com/Frbot25/api-denree#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1"
+  }
+}
