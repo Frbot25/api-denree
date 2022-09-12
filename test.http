@@ -30,3 +30,35 @@ Content-Type: application/json
 
 ### --- delete product
 DELETE  {{baseUrl}}/product/11
+
+
+### --- user login
+POST {{baseUrl}}/login
+Content-Type: application/json
+
+{
+    "email": "frederic.botella@gmail.com",
+    "password": "123465"
+}
+### --- user signup
+POST {{baseUrl}}/signup
+Content-Type: application/json
+
+{
+    "user_name": "Fred",
+    "email": "frederic.botella@gmail.com",
+    "password": "123465"
+}
+
+### --- user update
+POST {{baseUrl}}/user/6
+Content-Type: application/json
+
+{
+    "user_name": "Fredour",
+    "email": "frederic.botella@gmail.com",
+    "password": "123465"
+}
+
+### --- delete user
+DELETE  {{baseUrl}}/user/3
