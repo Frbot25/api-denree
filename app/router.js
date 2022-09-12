@@ -1,20 +1,19 @@
 const { Router, request, response } = require('express');
 
+const ProductController = require('./controllers/productController');
+
 const router = Router();
 
 // ACCUEIL
-router.get( "/", (request, response) => {
-    response.send('Accueil');
-})
+router.get( "/", ProductController.findAllProduct);
 
 // LOGIN
-router.get('/login', (request, response) => {
-    response.send('Login');
-})
-//REGISTER
-router.get('/register', (request, response) => {
-    response.send('register');
-})
+router.post('/product', ProductController.save);
 
+//REGISTER
+router.post('/product/:id', ProductController.update);
+
+//DELETE
+router.delete('/product/:id', ProductController.delete);
 
 module.exports = router;

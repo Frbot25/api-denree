@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:3000
+
+
+### - Find All Products
+GET {{baseUrl}}/
+
+### --- add product
+POST {{baseUrl}}/product
+Content-Type: application/json
+
+{
+    "title": "virginie@mail.io",
+    "designation": "1234",
+    "category": "Virginie",
+    "url_image": "",
+    "user_id": 1
+}
+
+### --- update product
+POST {{baseUrl}}/product/2
+Content-Type: application/json
+
+{
+    "title": "virginie@mail.i",
+    "designation": "123465",
+    "category": "Virginie",
+    "url_image": "",
+    "user_id": 1
+}
+
+### --- delete product
+DELETE  {{baseUrl}}/product/11
