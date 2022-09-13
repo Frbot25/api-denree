@@ -33,7 +33,8 @@ CREATE TABLE "product"(
 	title TEXT NOT NULL,
 	designation TEXT NOT NULL,
 	"category" TEXT NOT NULL,
-	"url_image" TEXT NOT NULL,
+	"url_image" TEXT,
+	"date_limit" TIMESTAMP NOT NULL,
 	createAt TIMESTAMPTZ NOT NULL DEFAULT NOW(),
     updateAt TIMESTAMPTZ,
     "user_id" INT NOT NULL REFERENCES "user"(id)

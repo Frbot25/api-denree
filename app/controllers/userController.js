@@ -1,4 +1,5 @@
 const User = require('../models/user');
+const jwt = require('../services/jwt');
 
 const userController = {
     //Renvoyer les infos user suite au login - ou une erreur
@@ -10,7 +11,14 @@ const userController = {
             //authentification
             console.log('Je veux authentifier le user => je vais envoyer les infos au model pour comparaison\n');
             const user = await new User(login).findUser();
-            response.send({user});
+            //access token
+            const accessToken = jwt.makeToken(user);
+            console.log('accessToken :',accessToken);
+            // refresh token
+            const refreshToken = jwt.refreshToken(user);
+            console.log('refreshToken :',refreshToken)
+            console.log('token user créé, on envoie tout au client\n\n');
+            response.header({'Authorization': accessToken,'refreshToken': refreshToken}).send({accessToken: accessToken, refreshToken: refreshToken,user,});
         } catch (error) {
             //lire l'erreur
             console.trace(error);
@@ -33,6 +41,8 @@ const userController = {
     },
     deleteUserById: async (request, response) => {
         try {
+            
+            const verifyToken = jwt.validateToken(user);
             const id = parseInt(request.params.id,10);
             console.log(id);
             const user = await new User(id).deleteUserById(id);

@@ -31,7 +31,7 @@ class User {
             const data = {
                 email: rows[0].email,
                 username: rows[0].user_name,
-                user_id: rows[0].id
+                id: rows[0].id
             }
             return data;
         } catch(error) {

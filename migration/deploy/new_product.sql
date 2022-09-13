@@ -9,6 +9,7 @@ CREATE OR REPLACE FUNCTION new_product(data json) RETURNS INT AS $$
       data->>'designation',
       data->>'category',
       data->>'url_image',
+      data->>'date_limit',
       (data->>'user_id')::INT
     ) RETURNING id
 $$ LANGUAGE SQL STRICT;

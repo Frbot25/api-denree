@@ -6,6 +6,7 @@ GET {{baseUrl}}/
 
 ### --- add product
 POST {{baseUrl}}/product
+Authorization: yJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOnsiZW1haWwiOiJmcmVkZXJpYy5ib3RlbGxhQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiRnJlZG91cmZzIiwiaWQiOjZ9LCJpYXQiOjE2NjMwNzM0NzQsImV4cCI6MTY2MzA3MzY1NH0.OvrQQg-RG580M-DOM1bETur91oVqQ_QUHysdu_f9r_s
 Content-Type: application/json
 
 {
@@ -13,6 +14,7 @@ Content-Type: application/json
     "designation": "1234",
     "category": "Virginie",
     "url_image": "",
+    "date_limit": "12/12/2022",
     "user_id": 1
 }
 
@@ -52,10 +54,12 @@ Content-Type: application/json
 
 ### --- user update
 POST {{baseUrl}}/user/6
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOnsiZW1haWwiOiJmcmVkZXJpYy5ib3RlbGxhQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiRnJlZG91cmZzIiwiaWQiOjZ9LCJpYXQiOjE2NjMwNjk0OTIsImV4cCI6MTY2MzA2OTY3Mn0.oVLc_2mK-kGO7rfg4o91A0l74lEK1M2l9o6zX-VaNok
+  
 Content-Type: application/json
 
 {
-    "user_name": "Fredour",
+    "user_name": "Fredo",
     "email": "frederic.botella@gmail.com",
     "password": "123465"
 }
